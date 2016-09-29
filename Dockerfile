@@ -33,4 +33,4 @@ COPY . .
 
 # Define the script we want run once the container boots
 # Use the "exec" form of CMD so our script shuts down gracefully on SIGTERM (i.e. `docker stop`)
-CMD ["bundle","exec","rails","server","-b","0.0.0.0"]
+CMD ["bundle","exec","rake","test","/test/models/article_test.rb"]
